@@ -1,12 +1,29 @@
 .navigation {
-  position: fixed;
-  top: 0;
-  width: calc(100% - 20px);
+  height: 100vh;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
   font-family: monospace;
   font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0;
+
+  li {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
 }
 
 .navigation ul {
@@ -14,11 +31,11 @@
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
 }
 
 .navigation li {
-  margin: 0 10px;
+  margin: 10px 0;
 }
 
 .navigation a {
@@ -32,14 +49,14 @@
 
 .submenu {
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 0;
+  left: 100%;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
   list-style-type: none;
   margin: 0;
 
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 150px;
 }
@@ -60,5 +77,33 @@
 }
 
 .has-submenu:hover .submenu {
-  display: block;
+  display: flex;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.user-email {
+  font-size: 14px;
+}
+
+.logout-button {
+  background-color: #f5f5f5;
+  color: black;
+  border: 1px solid #ddd;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #ddd;
 }

@@ -14,7 +14,7 @@ export default function Root(props) {
 
   return (
     <nav className="navigation">
-      <ul>
+      <ul className="vertical">
         <li>
           <a href="#home">Home</a>
         </li>
@@ -47,6 +47,12 @@ export default function Root(props) {
           <a href="#contact">Contact</a>
         </li>
       </ul>
+
+      <div className="user-info">
+        <span className="user-name">Mr John Doe</span>
+        <span className="user-email">john.doe@example.com</span>
+        <button className="logout-button">Logout</button>
+      </div>
     </nav>
   );
 }
