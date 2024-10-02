@@ -1,27 +1,29 @@
 .navigation {
   height: 100vh;
-  background-color: #fff;
+  background-color: #0077aa;
+  color: #fff;
   box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
   padding: 20px;
-  font-family: monospace;
-  font-size: 1.2rem;
+  font-family: system-ui, BlinkMacSystemFont, sans-serif;
+  font-size: 1.3em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .vertical {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 0;
-
   li {
     width: 100%;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 2px;
+
     &:hover {
       background-color: #f0f0f0;
+
+      a {
+        color: #333;
+      }
     }
   }
 }
@@ -40,7 +42,7 @@
 
 .navigation a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 .has-submenu {
@@ -73,7 +75,6 @@
 
 .submenu a {
   text-decoration: none;
-  color: #000;
 }
 
 .has-submenu:hover .submenu {
@@ -102,6 +103,7 @@
   padding: 10px 16px;
   border-radius: 5px;
   cursor: pointer;
+  width: 100%;
 }
 
 .logout-button:hover {
